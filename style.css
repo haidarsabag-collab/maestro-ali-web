@@ -57,27 +57,7 @@ nav a:hover {
     color: #E5B840;
 }
 
-.hero {
-    /* Fondo sólido para el Hero */
-    background-color: #1a1a1a; /* Un gris oscuro para el Hero */
-    padding: 40px 20px; /* Reducido aún más */
-    text-align: center;
-}
 
-.hero h2 {
-    font-family: 'Cinzel', serif;
-    font-size: 2.8rem; /* Ligeramente más pequeño */
-    margin-bottom: 10px;
-    color: #fff;
-    text-shadow: 0 0 10px rgba(229, 184, 64, 0.5);
-}
-
-.hero p {
-    font-size: 1.2rem; /* Ligeramente más pequeño */
-    color: #a0a0a0;
-    max-width: 600px;
-    margin: 0 auto 20px auto;
-}
 
 .cta-button {
     display: block; /* Cambiado a block para centrar con margin: auto */
