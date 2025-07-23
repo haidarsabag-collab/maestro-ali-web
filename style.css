@@ -57,7 +57,30 @@ nav a:hover {
     color: #E5B840;
 }
 
+/* Nueva sección de introducción */
+#introduccion-maestro {
+    background-color: #1a1a1a; /* Un gris oscuro similar al antiguo hero */
+    padding: 40px 20px; /* Mismo padding que el hero */
+    text-align: center;
+    margin-bottom: 40px; /* Espacio con la siguiente sección */
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
 
+#introduccion-maestro h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(229, 184, 64, 0.5);
+}
+
+#introduccion-maestro p {
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
 
 .cta-button {
     display: block; /* Cambiado a block para centrar con margin: auto */
@@ -289,7 +312,7 @@ h2 {
 }
 
 .ritual-form input[type="text"]:focus,
-.ritual-form input[type="date"]:focus,
+.ritual-form input[type="date']:focus,
 .ritual-form textarea:focus {
     outline: none;
     border-color: #E5B840;
