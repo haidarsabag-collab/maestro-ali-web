@@ -1,27 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Efecto de "fade-in" para las secciones al hacer scroll
-    const sections = document.querySelectorAll('section');
+    // Manejar el clic del botón de rituales
+    const btnRituales = document.getElementById('btn-rituales-evaluacion');
+    if (btnRituales) {
+        btnRituales.addEventListener('click', function() {
+            window.location.href = 'rituales_vinculos.html';
+        });
+    }
 
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
+    // Lógica para el menú de hamburguesa (si existe)
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.querySelector('nav .menu');
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
+    if (menuToggle && menu) {
+        menuToggle.addEventListener('change', function() {
+            if (this.checked) {
+                menu.style.display = 'flex';
+            } else {
+                menu.style.display = 'none';
             }
         });
-    }, observerOptions);
-
-    sections.forEach(section => {
-        section.style.opacity = 0;
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-        observer.observe(section);
-    });
+    }
 });
