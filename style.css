@@ -309,7 +309,7 @@ h2 {
     font-size: 1rem;
 }
 
-.ritual-form input[type="text"]:focus,
+.ritual-form input[type="text']:focus,
 .ritual-form input[type="date']:focus,
 .ritual-form textarea:focus {
     outline: none;
