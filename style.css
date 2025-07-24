@@ -1,115 +1,113 @@
-/* Estilos Generales (Mobile-First) */
+/* Estilos Generales */
 body {
     font-family: 'Lora', serif;
     background-color: #0d0d0d;
     color: #c5c5c5;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    font-size: 16px;
-}
-
-/* Header y Navegación */
-header {
-    background: #0d0d0d;
-    border-bottom: 1px solid #E5B840;
-    padding: 1rem 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    line-height: 1.7;
 }
 
 .logo h1 {
     font-family: 'Cinzel', serif;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #E5B840;
-    margin: 0;
 }
 
-.menu-toggle {
-    display: none; /* Ocultar el checkbox */
+header {
+    background: #0d0d0d;
+    border-bottom: 1px solid #E5B840;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.menu-icon {
-    display: block; /* Mostrar el icono de hamburguesa en móvil */
-    font-size: 2rem;
-    color: #E5B840;
-    cursor: pointer;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.menu {
+nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
-    display: none; /* Ocultar el menú por defecto en móvil */
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #0d0d0d;
-    border-top: 1px solid #E5B840;
+    display: flex;
 }
 
-.menu-toggle:checked + .menu-icon + .menu {
-    display: flex; /* Mostrar el menú cuando el checkbox está marcado */
+nav ul li {
+    margin-left: 30px;
 }
 
-.menu li {
-    text-align: center;
-    margin: 0;
-}
-
-.menu a {
-    display: block;
-    padding: 15px 0;
+nav a {
     color: #c5c5c5;
     text-decoration: none;
     font-weight: 600;
-    transition: background-color 0.3s, color 0.3s;
+    transition: color 0.3s;
+    font-size: 1rem;
 }
 
-.menu a:hover {
-    background-color: #1a1a1a;
+nav a:hover {
     color: #E5B840;
 }
 
 /* Sección de introducción superior */
 #top-intro {
-    background-color: #1a1a1a;
-    padding: 30px 5%;
+    background-color: #1a1a1a; /* Un gris oscuro */
+    padding: 40px 20px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 #top-intro h2 {
     font-family: 'Cinzel', serif;
-    font-size: 2rem;
+    font-size: 2.8rem; /* Ligeramente más pequeño */
     margin-bottom: 10px;
     color: #fff;
-    text-shadow: 0 0 8px rgba(229, 184, 64, 0.5);
+    text-shadow: 0 0 10px rgba(229, 184, 64, 0.5);
 }
 
 #top-intro p {
-    font-size: 1rem;
+    font-size: 1.2rem; /* Ligeramente más pequeño */
     color: #a0a0a0;
-    max-width: 90%;
-    margin: 0 auto;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+.cta-button {
+    display: block; /* Cambiado a block para centrar con margin: auto */
+    background-color: #E5B840;
+    color: #0d0d0d;
+    padding: 15px 35px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 25px auto; /* Centrado horizontalmente */
+    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid #E5B840;
+    max-width: 300px; /* Limitar el ancho para que no ocupe todo el espacio */
+}
+
+.cta-button:hover {
+    background-color: transparent;
+    color: #E5B840;
 }
 
 main {
     max-width: 1000px;
-    margin: 30px auto;
-    padding: 0 5%;
+    margin: 60px auto;
+    padding: 20px;
 }
 
 section {
-    padding: 30px 20px;
-    margin-bottom: 30px;
+    padding: 50px 20px;
+    margin-bottom: 40px;
     background-color: #121212;
     border: 1px solid #222;
     border-radius: 4px;
@@ -119,25 +117,24 @@ section {
 h2 {
     text-align: center;
     font-family: 'Cinzel', serif;
-    font-size: 1.8rem;
-    margin-bottom: 30px;
+    font-size: 2.4rem;
+    margin-bottom: 40px;
     color: #E5B840;
 }
 
 /* Servicios */
 .servicios-container {
     display: flex;
-    flex-direction: column; /* Apilar en móvil */
-    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
     gap: 25px;
 }
 
 .servicio-card {
     background-color: #1a1a1a;
-    padding: 25px;
+    padding: 30px;
     border-radius: 4px;
-    width: 90%; /* Ancho adaptable */
-    max-width: 350px; /* Límite para pantallas grandes */
+    width: 280px;
     text-align: center;
     border: 1px solid #333;
     transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
@@ -156,30 +153,30 @@ h2 {
     font-family: 'Cinzel', serif;
     color: #E5B840;
     margin-bottom: 15px;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .servicio-icon {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .servicio-icon svg {
-    width: 50px;
-    height: 50px;
-    fill: none;
-    stroke: #E5B840;
-    stroke-width: 2;
+    width: 60px;
+    height: 60px;
+    fill: none; /* Cambiado a none para un efecto delineado */
+    stroke: #E5B840; /* Color del trazo */
+    stroke-width: 2; /* Grosor del trazo para mayor visibilidad */
 }
 
 .payment-button {
-    display: block; /* Bloque para ocupar todo el ancho */
+    display: inline-block;
     background-color: transparent;
     color: #E5B840;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border-radius: 2px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-top: 20px;
     transition: background-color 0.3s, color 0.3s;
     border: 1px solid #E5B840;
@@ -193,38 +190,36 @@ h2 {
 /* Pagina de Detalle de Servicio */
 .detalle-servicio {
     text-align: center;
-    max-width: 90%; /* Ancho adaptable */
+    max-width: 700px;
     margin: 0 auto;
-    padding: 20px;
 }
 
 .detalle-servicio p {
-    font-size: 1rem;
-    margin-bottom: 20px;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
 }
 
 .precio-servicio {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-family: 'Cinzel', serif;
     color: #fff;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .payment-button-large {
-    display: block;
+    display: inline-block;
     background-color: #E5B840;
     color: #000;
-    padding: 15px 30px;
+    padding: 20px 50px;
     border-radius: 2px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1rem;
-    margin: 15px auto; /* Centrado */
+    font-size: 1.3rem;
+    margin-top: 10px;
     transition: background-color 0.3s, transform 0.3s;
     border: 1px solid #E5B840;
-    width: 90%; /* Ancho adaptable */
-    max-width: 300px; /* Límite */
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -234,14 +229,14 @@ h2 {
 }
 
 .opciones-compra {
-    margin-top: 40px;
+    margin-top: 50px;
     border-top: 2px solid #E5B840;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 .protocolo-post-pago {
-    margin-top: 40px;
-    padding-top: 20px;
+    margin-top: 50px;
+    padding-top: 30px;
     text-align: center;
 }
 
@@ -249,7 +244,7 @@ h2 {
     font-family: 'Cinzel', serif;
     color: #E5B840;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
 .protocolo-post-pago ul {
@@ -257,30 +252,28 @@ h2 {
     padding-left: 0;
     text-align: left;
     display: inline-block;
-    margin-top: 15px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .protocolo-post-pago ul li {
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23E5B840" class="bi bi-check-lg" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/></svg>') no-repeat left center;
     padding-left: 25px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .telegram-button-protocolo {
-    display: block;
+    display: inline-block;
     background-color: #0088cc;
     color: #fff;
-    padding: 12px 25px;
+    padding: 15px 35px;
     border-radius: 2px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1rem;
-    margin: 15px auto; /* Centrado */
+    font-size: 1.1rem;
     transition: background-color 0.3s;
     border: 1px solid #0088cc;
-    width: 90%;
-    max-width: 300px;
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -290,31 +283,30 @@ h2 {
 
 /* Formulario de Ritual */
 .ritual-form {
-    max-width: 90%;
-    margin: 30px auto 0 auto;
+    max-width: 600px;
+    margin: 40px auto 0 auto;
     text-align: left;
 }
 
 .ritual-form label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     font-weight: bold;
     color: #c5c5c5;
-    font-size: 0.9rem;
 }
 
 .ritual-form input[type="text"],
 .ritual-form input[type="date"],
 .ritual-form textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 12px;
+    margin-bottom: 20px;
     background-color: #1a1a1a;
     border: 1px solid #333;
     border-radius: 2px;
     color: #c5c5c5;
     font-family: 'Lora', serif;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .ritual-form input[type="text']:focus,
@@ -326,167 +318,99 @@ h2 {
 
 .legal-links {
     margin-top: 20px;
-    font-size: 0.8rem;
-    text-align: center;
+    font-size: 0.85rem;
+    text-align: center; /* Centrar los enlaces legales */
+    display: block; /* Asegura que el div se comporte como un bloque para margin:auto */
+    width: fit-content; /* Permite que el div se ajuste al contenido para centrado */
 }
 
 .legal-links a {
-    color: #a0a0a0;
+    color: #a0a0a0; /* Color blanco medio oculto */
     text-decoration: none;
-    margin: 0 8px;
+    margin: 0 10px;
     transition: color 0.3s;
 }
 
 .legal-links a:hover {
-    color: #fff;
+    color: #fff; /* Blanco puro al pasar el mouse */
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px 5%;
-    margin-top: 30px;
-    font-size: 0.8rem;
+    padding: 30px 20px;
+    margin-top: 50px;
+    font-size: 0.9rem;
     color: #666;
     border-top: 1px solid #222;
+    /* Centrado de elementos internos del footer */
+    display: flex; /* Usar flexbox para centrar */
+    flex-direction: column; /* Apilar elementos verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: center; /* Centrar verticalmente si hay espacio */
 }
 
-/* Media Queries para Desktop (Sobreescriben estilos móviles) */
-@media (min-width: 769px) {
-    header {
-        padding: 1rem 5%;
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 0 2%;
     }
 
-    .logo h1 {
-        font-size: 1.8rem;
+    nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .menu-icon {
-        display: none; /* Ocultar icono de hamburguesa en desktop */
-    }
-
-    .menu {
-        display: flex; /* Mostrar menú en desktop */
-        position: static;
-        flex-direction: row;
-        background-color: transparent;
-        border-top: none;
-    }
-
-    .menu li {
-        margin-left: 30px;
-    }
-
-    .menu a {
-        padding: 0;
-    }
-
-    #top-intro {
-        padding: 40px 20px;
+    nav ul li {
+        margin: 5px 10px;
     }
 
     #top-intro h2 {
-        font-size: 2.8rem;
+        font-size: 2rem;
     }
 
     #top-intro p {
-        font-size: 1.2rem;
-    }
-
-    main {
-        margin: 60px auto;
-        padding: 20px;
-    }
-
-    section {
-        padding: 50px 20px;
-        margin-bottom: 40px;
+        font-size: 1rem;
     }
 
     h2 {
-        font-size: 2.4rem;
-    }
-
-    .servicios-container {
-        flex-direction: row; /* Volver a fila en desktop */
-        justify-content: space-around;
-    }
-
-    .servicio-card {
-        width: 280px;
-    }
-
-    .servicio-card h3 {
-        font-size: 1.4rem;
-    }
-
-    .servicio-icon svg {
-        width: 60px;
-        height: 60px;
-    }
-
-    .payment-button {
-        display: inline-block;
-        padding: 12px 25px;
-        font-size: 1rem;
-    }
-
-    .detalle-servicio {
-        max-width: 700px;
-        padding: 0;
-    }
-
-    .detalle-servicio p {
-        font-size: 1.1rem;
-    }
-
-    .precio-servicio {
         font-size: 1.8rem;
     }
 
-    .payment-button-large {
-        padding: 20px 50px;
-        font-size: 1.3rem;
-        width: 100%; /* Asegura que siga siendo ancho en desktop */
-        max-width: 350px; /* Límite para que no sea excesivamente ancho */
+    .servicios-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .protocolo-post-pago ul {
-        width: auto;
-    }
-
-    .telegram-button-protocolo {
-        padding: 15px 35px;
-        font-size: 1.1rem;
-        width: 100%;
+    .servicio-card {
+        width: 90%;
         max-width: 350px;
     }
 
+    .detalle-servicio {
+        padding: 20px;
+    }
+
+    .detalle-servicio h2 {
+        font-size: 2rem;
+    }
+
+    .detalle-servicio p {
+        font-size: 1rem;
+    }
+
+    .payment-button-large {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+    }
+
+    .protocolo-post-pago ul {
+        width: 90%;
+    }
+
     .ritual-form {
-        max-width: 600px;
-    }
-
-    .ritual-form label {
-        font-size: 1rem;
-    }
-
-    .ritual-form input[type="text"],
-    .ritual-form input[type="date"],
-    .ritual-form textarea {
-        font-size: 1rem;
-    }
-
-    .legal-links {
-        font-size: 0.85rem;
-    }
-
-    .legal-links a {
-        margin: 0 10px;
-    }
-
-    footer {
-        padding: 30px 20px;
-        margin-top: 50px;
-        font-size: 0.9rem;
+        width: 90%;
     }
 }
