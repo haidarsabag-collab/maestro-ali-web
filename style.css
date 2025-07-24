@@ -341,7 +341,12 @@ footer {
     font-size: 0.9rem;
     color: #666;
     border-top: 1px solid #222;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* Reconstrucción del centrado */
+    display: block; /* Asegura que el footer sea un bloque */
+}
+
+footer p, footer .legal-links {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: fit-content; /* Permite que el contenido se ajuste y se centre */
 }
