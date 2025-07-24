@@ -117,7 +117,7 @@ nav .menu a:hover {
     font-size: 1rem;
     color: #a0a0a0;
     max-width: 90%;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
 }
 
 section {
